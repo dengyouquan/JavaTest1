@@ -12,8 +12,9 @@ public class App
 {
     public static void main( String[] args )
     {
-        System.out.println("传统："+TraditionSortFactory.getInstance().getList(50,100));
-        System.out.println("流："+StreamSortFactory.getInstance().getList(50,100));
+        Factory factory = new Factory();
+        System.out.println("传统："+factory.getFactory(FactoryMethod.CUSTOM).getList(50,100));
+        System.out.println("流："+factory.getFactory(FactoryMethod.STREAM).getList(50,100));
 
     }
 
